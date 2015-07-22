@@ -29,7 +29,7 @@ for an application targeting an SDK below M, the API will return empty or no dat
 Pre-requisites
 --------------
 
-- Android SDK vandroid-MNC
+- Android SDK android-MNC
 - Android Build Tools v22.0.1
 - Android Support Repository
 
