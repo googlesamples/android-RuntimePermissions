@@ -83,7 +83,7 @@ public abstract class PermissionUtil {
          TODO: In the Android M Preview release, checking if the platform is M is done through
          the codename, not the version code. Once the API has been finalised, the following check
          should be used: */
-        // return Build.VERSION.SDK_INT == Build.VERSION_CODES.MNC
+        // return Build.VERSION.SDK_INT >= Build.VERSION_CODES.MNC
 
         return "MNC".equals(Build.VERSION.CODENAME);
     }
