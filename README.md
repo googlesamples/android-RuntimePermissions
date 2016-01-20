@@ -18,7 +18,7 @@ through  ActivityCompat#checkSelfPermission(Context, String) or
 ContextCompat#checkSelfPermission(Context, String).
 Permission are requested through ActivityCompat#requestPermissions(Activity, String[], int), and the response
 received in a callback to  ActivityCompat.OnRequestPermissionsResultCallback#onRequestPermissionsResult(int, String[], int[]).
-Applications can provide an additional rational for the use of permissions after calling
+Applications can provide an additional rationale for the use of permissions after calling
 ActivityCompat#shouldShowRequestPermissionRationale(Activity,String). This call will return true if the
 application should provide the user with more context on why the requested permissions is needed,
 for example if the permission request has been denied before.
