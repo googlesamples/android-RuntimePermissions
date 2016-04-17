@@ -14,12 +14,12 @@ permissions at runtime.
 All permissions still need to be declared in the AndroidManifest. However, when accessing APIs that
 require a permission, the Activity or Fragment has to verify that the permission has been granted
 or request the missing permissions using calls through the support library. Permissions are checked
-through  ActivityCompat#checkSelfPermission(Context, String) or
-ContextCompat#checkSelfPermission(Context, String).
-Permission are requested through ActivityCompat#requestPermissions(Activity, String[], int), and the response
-received in a callback to  ActivityCompat.OnRequestPermissionsResultCallback#onRequestPermissionsResult(int, String[], int[]).
+through `ActivityCompat#checkSelfPermission(Context, String)` or
+`ContextCompat#checkSelfPermission(Context, String)`.
+Permission are requested through `ActivityCompat#requestPermissions(Activity, String[], int)`, and the response
+received in a callback to `ActivityCompat.OnRequestPermissionsResultCallback#onRequestPermissionsResult(int, String[], int[])`.
 Applications can provide an additional rational for the use of permissions after calling
-ActivityCompat#shouldShowRequestPermissionRationale(Activity,String). This call will return true if the
+`ActivityCompat#shouldShowRequestPermissionRationale(Activity,String)`. This call will return true if the
 application should provide the user with more context on why the requested permissions is needed,
 for example if the permission request has been denied before.
 
