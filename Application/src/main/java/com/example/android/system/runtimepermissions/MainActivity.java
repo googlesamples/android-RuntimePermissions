@@ -275,6 +275,7 @@ public class MainActivity extends SampleActivityBase
                 Log.i(TAG, "CAMERA permission has now been granted. Showing preview.");
                 Snackbar.make(mLayout, R.string.permision_available_camera,
                         Snackbar.LENGTH_SHORT).show();
+                mShowCameraActionFlag = true;
             } else {
                 Log.i(TAG, "CAMERA permission was NOT granted.");
                 Snackbar.make(mLayout, R.string.permissions_not_granted,
@@ -293,6 +294,7 @@ public class MainActivity extends SampleActivityBase
                 Snackbar.make(mLayout, R.string.permision_available_contacts,
                         Snackbar.LENGTH_SHORT)
                         .show();
+                mShowContactActionFlag = true;
             } else {
                 Log.i(TAG, "Contacts permissions were NOT granted.");
                 Snackbar.make(mLayout, R.string.permissions_not_granted,
@@ -302,6 +304,30 @@ public class MainActivity extends SampleActivityBase
 
         } else {
             super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
+    }
+
+    /**
+     * Indicates whether need to take related action after permission granted or not.
+     */
+    private boolean mShowCameraActionFlag = false;
+    private boolean mShowContactActionFlag = false;
+
+    /**
+     * Do permission related actions after Activity resumed.
+     * If you do things below in {@link android.support.v4.app.FragmentActivity#onRequestPermissionsResult(int, String[], int[])}
+     * instantly, you may encounter the {@link IllegalStateException} because of consideration of activity's state loss.
+     */
+    @Override
+    protected void onPostResume() {
+        super.onPostResume();
+        if (mShowCameraActionFlag) {
+            showCameraPreview();
+            mShowCameraActionFlag = false;
+        }
+        if (mShowContactActionFlag) {
+            showContactDetails();
+            mShowContactActionFlag = false;
         }
     }
 
