@@ -277,7 +277,7 @@ public class MainActivity extends SampleActivityBase
                         Snackbar.LENGTH_SHORT).show();
             } else {
                 Log.i(TAG, "CAMERA permission was NOT granted.");
-                Snackbar.make(mLayout, R.string.permissions_not_granted,
+                Snackbar.make(mLayout, R.string.permission_not_granted,
                         Snackbar.LENGTH_SHORT).show();
 
             }
@@ -295,7 +295,7 @@ public class MainActivity extends SampleActivityBase
                         .show();
             } else {
                 Log.i(TAG, "Contacts permissions were NOT granted.");
-                Snackbar.make(mLayout, R.string.permissions_not_granted,
+                Snackbar.make(mLayout, R.string.permission_not_granted,
                         Snackbar.LENGTH_SHORT)
                         .show();
             }
