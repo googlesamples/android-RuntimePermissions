@@ -273,7 +273,7 @@ public class MainActivity extends SampleActivityBase
             if (grantResults.length == 1 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 // Camera permission has been granted, preview can be displayed
                 Log.i(TAG, "CAMERA permission has now been granted. Showing preview.");
-                Snackbar.make(mLayout, R.string.permision_available_camera,
+                Snackbar.make(mLayout, R.string.permission_available_camera,
                         Snackbar.LENGTH_SHORT).show();
             } else {
                 Log.i(TAG, "CAMERA permission was NOT granted.");
@@ -290,7 +290,7 @@ public class MainActivity extends SampleActivityBase
             // checked.
             if (PermissionUtil.verifyPermissions(grantResults)) {
                 // All required permissions have been granted, display contacts fragment.
-                Snackbar.make(mLayout, R.string.permision_available_contacts,
+                Snackbar.make(mLayout, R.string.permission_available_contacts,
                         Snackbar.LENGTH_SHORT)
                         .show();
             } else {
