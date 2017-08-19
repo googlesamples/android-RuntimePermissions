@@ -23,7 +23,7 @@
               android:paddingTop="@dimen/vertical_page_margin"
               android:paddingBottom="@dimen/vertical_page_margin"
               android:orientation="vertical"
-              tools:context=".MainActivityFragment">
+              tools:context=".MainActivity">
 
     <TextView
             android:text="@string/main_introduction"

@@ -26,6 +26,7 @@ import com.example.android.system.runtimepermissions.contacts.ContactsFragment;
 import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -379,5 +380,10 @@ public class MainActivity extends SampleActivityBase
         // This method sets up our custom logger, which will print all log messages to the device
         // screen, as well as to adb logcat.
         initializeLogging();
+    }
+
+    public void displayNewContactActivity(View view){
+        Intent intent = new Intent(this, add_contact.class);
+        startActivity(intent);
     }
 }

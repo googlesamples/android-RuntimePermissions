@@ -28,6 +28,7 @@ import android.os.RemoteException;
 import android.provider.ContactsContract;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
@@ -67,6 +68,7 @@ public class ContactsFragment extends Fragment implements LoaderManager.LoaderCa
      * Sort order for the query. Sorted by primary name in ascending order.
      */
     private static final String ORDER = ContactsContract.Contacts.DISPLAY_NAME_PRIMARY + " ASC";
+    private FragmentManager supportFragmentManager;
 
 
     /**
@@ -86,7 +88,7 @@ public class ContactsFragment extends Fragment implements LoaderManager.LoaderCa
         mMessageText = (TextView) rootView.findViewById(R.id.contact_message);
 
         // Register a listener to add a dummy contact when a button is clicked.
-        Button button = (Button) rootView.findViewById(R.id.contact_add);
+        /*Button button = (Button) rootView.findViewById(R.id.contact_add);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -101,7 +103,7 @@ public class ContactsFragment extends Fragment implements LoaderManager.LoaderCa
             public void onClick(View view) {
                 loadContact();
             }
-        });
+        });*/
         return rootView;
     }
 
@@ -186,4 +188,5 @@ public class ContactsFragment extends Fragment implements LoaderManager.LoaderCa
             Log.d(TAG, "Could not add a new contact: " + e.getMessage());
         }
     }
+
 }
