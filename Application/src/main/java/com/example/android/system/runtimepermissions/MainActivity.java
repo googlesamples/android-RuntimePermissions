@@ -161,7 +161,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     /**
-     * Called when the 'show camera' button is clicked.
+     * Called when the 'show contact' button is clicked.
      * Callback is defined in resource layout definition.
      */
     public void showContacts(View v) {
